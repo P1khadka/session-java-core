@@ -9,5 +9,14 @@ public class SchoolApp {
         Student prakash= new Student();
         prakash.getName();
         prakash.getAge();
+
+
+// we can create the object like this because inheritance is  "is-a "relation
+        Person person= new Student();
+        Person person1= new Teacher();
+
+        // but we cannot make like
+       // Student student= new Person();
+
     }
 }
