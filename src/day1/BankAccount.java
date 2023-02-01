@@ -5,11 +5,24 @@ public class BankAccount {
     private String accountHolderName;
     private String accountNumber;
     private String accountType;
-    private String accountBalance;
+    private double accountBalance;
     private Address address;
     private long socialSecurityNumber;
     private String openingBranch;
     private final String BANK_NAME="Bank of America";
+
+    public BankAccount(){ // default constructer
+    }
+
+    public BankAccount(String accountNumber, String accountHolderName, String accountType, double accountBalance, long socialSecurityNumber, String openingBranch, String BANK_NAME){
+        this.accountNumber=accountNumber;
+        this.accountHolderName=accountHolderName;
+        this.accountBalance=accountBalance;
+        this.openingBranch=openingBranch;
+        this.address=address;
+       this.socialSecurityNumber=socialSecurityNumber;
+       this.accountType=accountType;
+    }
 
     public void setAccountHolderName( String accountHolderName){
         this.accountHolderName=accountHolderName;
@@ -49,7 +62,7 @@ return "";
 
     }
     // check balance
-    public String checkBalance(BankAccount account){
+    public double checkBalance(BankAccount account){
        return account.accountBalance;
     }
 

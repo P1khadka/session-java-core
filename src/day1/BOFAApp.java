@@ -12,6 +12,13 @@ public class BOFAApp {
         BankAccount archanaAccount= new BankAccount();
       //  archanaAccount.accountHolderName="Archana Giri";
        // archanaAccount.accountNumber="1234567";
+
+        Address tankaAddress= new Address();
+        BankAccount tankaAccount= new BankAccount("12345", "Tanka Khadka", "Checking", 8000.0, 123342552,"Neapal",   "BOFA" );
+        System.out.println(tankaAccount);
     }
+
+
+
 
 }

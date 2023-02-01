@@ -1,8 +1,21 @@
 package day3;
 
+import java.time.LocalDate;
+import java.time.Month;
+
 public class Person {
     private String name;
     private int age;
+
+    public LocalDate getDob() {
+        return dob;
+    }
+
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
+    }
+
+    private LocalDate dob=LocalDate.of(1953, Month.JANUARY, 26);
 
     public String getName() {
         return name;
@@ -14,9 +27,7 @@ public class Person {
 
     public int getAge() {
         return age;
-    }
 
-    public void setAge(int age) {
-        this.age = age;
+
     }
 }
