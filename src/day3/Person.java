@@ -7,6 +7,16 @@ public class Person {
     private String name;
     private int age;
 
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    private Gender gender;
+
     public LocalDate getDob() {
         return dob;
     }

@@ -10,6 +10,7 @@ public class BankAccount {
     private long socialSecurityNumber;
     private String openingBranch;
     private final String BANK_NAME="Bank of America";
+    private int licenceNumber;
 
     public BankAccount(){ // default constructer
     }
@@ -22,6 +23,17 @@ public class BankAccount {
         this.address=address;
        this.socialSecurityNumber=socialSecurityNumber;
        this.accountType=accountType;
+    }
+    public BankAccount(String accountNumber, String accountHolderName, String accountType, double accountBalance, long socialSecurityNumber, String openingBranch, String BANK_NAME, int licenceNumber){
+//        this.accountNumber=accountNumber;
+//        this.accountHolderName=accountHolderName;
+//        this.accountBalance=accountBalance;
+//        this.openingBranch=openingBranch;
+//        this.address=address;
+//        this.socialSecurityNumber=socialSecurityNumber;
+//        this.accountType=accountType;
+        this(accountNumber,accountHolderName,accountType, accountBalance,socialSecurityNumber,openingBranch, BANK_NAME);
+        this.licenceNumber=licenceNumber;
     }
 
     public void setAccountHolderName( String accountHolderName){
@@ -41,7 +53,7 @@ public class BankAccount {
 
     // behaviour
     // deposit
-    public double deposit(BankAccount toAccount, double amountToBeDeposit ){
+    public double deposit( double amountToBeDeposit ){
         return 0.0;
     }
 
@@ -50,7 +62,7 @@ public class BankAccount {
         return 0.00;
     }
     // transfer
-    public  boolean tranfer(BankAccount fromAccount, BankAccount toAccount, double amountToBeTransfer){
+    public  boolean tranfer( BankAccount toAccount, double amountToBeTransfer){
         return true;
     }
     // download statemen
@@ -58,12 +70,12 @@ public class BankAccount {
 return "";
     }
     //  link cards
-    public void linkCard(BankAccount account, String cardNumber){
+    public void linkCard( String cardNumber){
 
     }
     // check balance
-    public double checkBalance(BankAccount account){
-       return account.accountBalance;
+    public double checkBalance(){
+       return this.accountBalance=accountBalance;
     }
 
 
