@@ -16,5 +16,6 @@ public class ArraySort {
         Arrays.sort(student);
         System.out.println(Arrays.toString(student));
 
+
     }
 }
